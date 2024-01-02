@@ -50,10 +50,10 @@
 
 <body>
 
-  <div id="loading-overlay">LOADING...
+  <div id="loading-overlay">
     <div id="loading-spinner"></div>
   </div>
-  
+
   <!-- ======= Menu Section ======= -->
   <section id="menu" class="menu">
     <div class="container">
@@ -69,9 +69,10 @@
           <ul id="menu-flters">
             <li data-filter="*" class="filter-active">Show All</li>
             <li data-filter=".filter-hotdrinks"> Hot Drinks </li>
-            <li data-filter=".filter-freshness"> Freshness </li>
+            <li data-filter=".filter-milkshakes"> Milkshakes </li>
             <li data-filter=".filter-sobhiyeh"> Sobhiyeh </li>
             <li data-filter=".filter-icedcoffee"> Iced Coffee Shake </li>
+            <li data-filter=".filter-freshness"> Freshness </li>
           </ul>
         </div>
       </div>
@@ -231,49 +232,74 @@
 
 
 
-        <div class="col-lg-12 menu-item filter-icedcoffee">
+       
+
+        <div class="col-lg-12 menu-item filter-milkshakes">
           <br>
           <div class="text-center" id="Head">
-            <b>Iced Coffee Shake</b>
+            <b>MILK SHAKES </b>
           </div>
         </div>
 
-        <div class="col-lg-6 menu-item filter-icedcoffee">
+        <div class="col-lg-6 menu-item filter-milkshakes">
           <div class="menu-content">
-            Iced cappuccino <span>$2.30</span>
+            Chocolate Large <span>$4.20</span>
           </div>
         </div>
 
-        <div class="col-lg-6 menu-item filter-icedcoffee">
+        <div class="col-lg-6 menu-item filter-milkshakes">
           <div class="menu-content">
-            Iced filtered coffee <span>$2.30</span>
+            Chocolate Small <span>$2.75</span>
           </div>
         </div>
 
-        <div class="col-lg-6 menu-item filter-icedcoffee">
+        <div class="col-lg-6 menu-item filter-milkshakes">
           <div class="menu-content">
-            Iced latte <span>$2.30</span>
+            Cookies Large <span>$4.80</span>
           </div>
         </div>
 
-        <div class="col-lg-6 menu-item filter-icedcoffee">
+        <div class="col-lg-6 menu-item filter-milkshakes">
           <div class="menu-content">
-            Iced mocha dark/white <span>$3.40</span>
+            Cookies Small <span>$3.20</span>
           </div>
         </div>
 
-        <div class="col-lg-12 menu-item filter-icedcoffee">
+        <div class="col-lg-6 menu-item filter-milkshakes">
+          <div class="menu-content">
+            Hazelnut Large <span>$4.20</span>
+          </div>
+        </div>
+
+        <div class="col-lg-6 menu-item filter-milkshakes">
+          <div class="menu-content">
+            Hazelnut Small <span>$2.80</span>
+          </div>
+        </div>
+
+        <div class="col-lg-6 menu-item filter-milkshakes">
+          <div class="menu-content">
+            Blended Bliss (New) Large <span>$6.00</span>
+          </div>
+        </div>
+
+        <div class="col-lg-6 menu-item filter-milkshakes">
+          <div class="menu-content">
+            Blended Bliss (New) Small <span>$4.50</span>
+          </div>
+        </div>
+
+        <div class="col-lg-12 menu-item filter-milkshakes">
           <br>
           <div class=" text-center ">
-            <img src="./assets/img/1-removebg-preview.png" alt="Iced Coffee" class="img-fluid">
+            <img src="./assets/img/1-removebg-preview.png" alt="Milkshakes" class="img-fluid">
           </div>
         </div>
 
-        <div class="col-lg-12 menu-item filter-icedcoffee">
+
+        <div class="col-lg-12 menu-item filter-milkshakes">
           <br>
         </div>
-
-
 
         <div class="col-lg-12 menu-item filter-sobhiyeh">
           <br>
@@ -322,6 +348,43 @@
         <div class="col-lg-12 menu-item filter-sobhiyeh">
           <br>
         </div>
+
+        <div class="col-lg-12 menu-item filter-icedcoffee">
+          <br>
+          <div class="text-center" id="Head">
+            <b>Iced Coffee Shake</b>
+          </div>
+        </div>
+
+        <div class="col-lg-6 menu-item filter-icedcoffee">
+          <div class="menu-content">
+            Iced cappuccino <span>$2.30</span>
+          </div>
+        </div>
+
+        <div class="col-lg-6 menu-item filter-icedcoffee">
+          <div class="menu-content">
+            Iced filtered coffee <span>$2.30</span>
+          </div>
+        </div>
+
+        <div class="col-lg-6 menu-item filter-icedcoffee">
+          <div class="menu-content">
+            Iced latte <span>$2.30</span>
+          </div>
+        </div>
+
+        <div class="col-lg-6 menu-item filter-icedcoffee">
+          <div class="menu-content">
+            Iced mocha dark/white <span>$3.40</span>
+          </div>
+        </div>
+
+       
+        <div class="col-lg-12 menu-item filter-icedcoffee">
+          <br>
+        </div>
+
 
 
         <div class="col-lg-12 menu-item filter-freshness">
@@ -399,13 +462,13 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
-      <script>
-        window.addEventListener('load', function() {
-          // Hide the loading overlay once all images are loaded
-          document.getElementById('loading-overlay').style.display = 'none';
-        });
-      </script>
-      
+  <script>
+    window.addEventListener('load', function () {
+      // Hide the loading overlay once all images are loaded
+      document.getElementById('loading-overlay').style.display = 'none';
+    });
+  </script>
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
