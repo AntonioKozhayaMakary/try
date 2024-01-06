@@ -6,42 +6,102 @@ body {
   background-repeat: repeat-y;
   background-size: contain;
 }
-/* Loading Overlay Styles */
+
 /* Loading Overlay Styles */
 #loading-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color:  #B89B8D;
+  width: 100%;
+  height: 100%;
+  background-color: #B89B8D;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  flex-direction: column; /* Stack items vertically */
   z-index: 9999;
 }
 
-#loading-spinner {
-  border: 4px solid rgba(0, 0, 0, 0.1);
-  border-top: 4px solid black;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s linear infinite;
+#loading-spinner svg {
+  width: 95%;
+  height: 400px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
+  animation: moveForwardAndBack 1s infinite alternate ; /* Use your desired animation duration */
 }
 
+@keyframes moveForwardAndBack {
+  0% {
+    transform: translateX(-55px);
+  }
+  10% {
+    transform: translateX(-45px); /* Adjust the distance it moves */
+  }
+  20% {
+    transform: translateX(-35px); /* Adjust the distance it moves */
+  }
+  30% {
+    transform: translateX(-25px); /* Adjust the distance it moves */
+  }
+  40% {
+    transform: translateX(-15px); /* Adjust the distance it moves */
+  }
+  50% {
+    transform: translateX(-5px); /* Adjust the distance it moves */
+  }
+  60% {
+    transform: translateX(5px); /* Adjust the distance it moves */
+  }
+  70% {
+    transform: translateX(15px); /* Adjust the distance it moves */
+  }
+  80% {
+    transform: translateX(25px); /* Adjust the distance it moves */
+  }
+  90% {
+    transform: translateX(35px); /* Adjust the distance it moves */
+  }
+  100% {
+    transform: translateX(45px);
+  }
+}
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+#view-menu-btn {
+  background-color: #B89B8D;
+  color: #000;
+  padding: 10px 20px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: -4rem;
+  z-index: 9999;
+}
+
+#view-menu-btn:hover {
+  background-color: #000;
+  color: #B89B8D;
 }
 
 
 @font-face {
-  font-family: 'Motherline';
-  src: url('motherline-sans-rough.ttf') format('truetype');
-  
- 
+  font-family: 'Regular';
+  src: url('HelveticaNowText-Regular.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Thin Pdf';
+  src: url('Fontspring-DEMO-pgf-now-light.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Helvetica Bold';
+  src: url('HelveticaNowText-Bold.ttf') format('truetype');
 }
 
 @font-face {
@@ -52,15 +112,25 @@ body {
 
 #Head {
   color: #000;
-  font-size: 24px;
-  font-family: 'Motherline', sans-serif;
+ 
   text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
-#Title{
+.firstfont {
+  font-size: 27px;
+  font-family: 'Thin Pdf';
+}
+
+.secondfont {
+  font-size: 24px;
+  font-family: 'Helvetica Bold';
+  letter-spacing: 0.01px;
+}
+
+
+#Title {
   color: #000;
-  font-family: "Motherline";
+  font-family: "Regular";
   font-size: 3rem;
   margin: 1rem;
   padding-top: 1rem;
@@ -200,7 +270,7 @@ section {
 }
 
 .menu .menu-content {
-  margin-top: 40px;
+  margin-top: 1rem;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
@@ -210,7 +280,7 @@ section {
   z-index: 3;
   font-weight: 700;
   color: #000;
-  font-family: 'MergePro', sans-serif;
+  font-family: 'Regular', sans-serif;
 }
 
 .menu .menu-content::after {
@@ -220,7 +290,7 @@ section {
   top: -4px;
   z-index: 1;
   color: #dad8d4;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: Regular, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .menu .menu-content span {
@@ -232,7 +302,7 @@ section {
 
 .menu .menu-ingredients {
   font-size: 11px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Regular', sans-serif;
   color: #000;
   font-weight: bold;
   text-transform: uppercase;
@@ -242,7 +312,7 @@ section {
 .sub {
   font-style: italic;
   font-size: 14px;
-  font-family: "Comic Neue", sans-serif;
+  font-family: "Regular", sans-serif;
   color: #000;
   text-align: center;
 }
@@ -273,6 +343,7 @@ section {
   font-size: 14px;
   text-align: center;
   padding: 30px 0;
+  font-family: 'Helvetica Bold', sans-serif;
 }
 
 #footer h3 {
@@ -316,8 +387,10 @@ section {
 
 #footer .copyright {
   margin: 0 0 5px 0;
+  font-family: 'Helvetica Bold', sans-serif;
 }
 
 #footer .credits {
   font-size: 13px;
+  font-family: 'Helvetica Bold', sans-serif;
 }
