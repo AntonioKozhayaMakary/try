@@ -24,11 +24,7 @@ body {
   z-index: 9999;
 }
 
-#loading-spinner svg {
-  width: 95%;
-  height: 400px;
-  margin-left: 1rem;
-  margin-right: 1rem;
+#loading-spinner img {
   margin-top: 2rem;
   animation: moveForwardAndBack 1s infinite alternate;
   /* Use your desired animation duration */
